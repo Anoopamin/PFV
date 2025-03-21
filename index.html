@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title and description -->
+
+    <title>Prakriti future venture</title>
+    <meta
+      name="description"
+      content="A brief description of your page content."
+    />
+
+    <meta name="keywords" content="keyword1, keyword2" />
+
+    <meta name="subject" content="your website's subject" />
+    <meta name="copyright" content="Prakriti future ventures" />
+    <meta name="language" content="ES" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revised" content="Sunday, July 18th, 2010, 5:15 pm" />
+    <meta name="abstract" content="" />
+    <meta name="topic" content="" />
+    <meta name="summary" content="" />
+    <meta name="Classification" content="Business" />
+    <meta name="author" content="name, info@pfv.co.in" />
+    <meta name="designer" content="Anoop C B" />
+    <meta name="copyright" content="Prakriti future ventures" />
+    <meta name="reply-to" content="info@pfv.co.in" />
+    <meta name="owner" content="" />
+    <meta name="url" content="http://www.pfv.co.in" />
+    <meta name="identifier-URL" content="http://www.pfv.co.in" />
+    <meta name="directory" content="submission" />
+    <meta name="category" content="" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{background-color:#f8f7f4}
+     .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 3rem 0;
+    margin-top: auto;
+  }
+  
+  .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #FF6B00;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .footer-about p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .footer-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    color: #FF6B00;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #FF6B00;
+    padding-left: 5px;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background-color: #FF6B00;
+    transform: translateY(-3px);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      justify-content: center;
+    }
+    
+    .footer-social {
+      justify-content: center;
+    }
+  }
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .hero-slide.active {
+    opacity: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-button {
+    display: inline-block;
+    background-color: #0078d7;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #0078d7;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .hero-button:hover {
+    background-color: transparent;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.4rem;
+    }
+    
+    .hero-paragraph {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  }
+      h5{align-items: center;}
+      .position {
+        position: sticky;
+        z-index: 100;
+        left: 4px;
+        top: 4px;
+      }
+      .logo {
+        width: 120px; /* Initial width */
+        height: 120px; /* Initial height */
+        transition: width 0.7s ease, height 0.7s ease, transform 0.6s ease;
+      }
+
+      .logo.shrink {
+        width: 75px; /* Shrunk width */
+        height: 75px; /* Shrunk height */
+        transform: translateY(-2px); /* Optional for slight lift effect */
+      }
+      .serif-sans {
+        font-family: 'Manrope', sans-serif;/* Serif fonts */
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .sans-serif {
+        font-family: "Arial", "Helvetica", sans-serif; /* Sans-serif fonts */
+      }
+
+      .hybrid-text {
+        color: #ffffff;
+        font-family: "Georgia", "Arial", sans-serif; /* A combination */
+        font-style: italic; /* Optional styling for differentiation */
+      }
+      .leftalign{
+        text-align: left;
+        
+      }
+      .VVV{
+        background-color: rgba(21, 20, 20, 0.796);
+        padding:  10px 88px;
+      }
+      .VVV {
+            position: relative;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+        
+        .VVV::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 5px;
+            background: linear-gradient(90deg, transparent, transparent, #FF7F00, #FF7F00, transparent);
+            background-size: 300% 100%;
+            z-index: -1;
+            animation: orangeOutline 3s linear infinite;
+        }
+        .nn{
+          padding: 45px;
+        }
+        
+    </style>
+    <script>
+           setTimeout(() => {
+        window.scrollTo({
+          top: 125, // Scroll to 1500px down the page
+          behavior: "smooth", // Smooth scrolling effect
+        });
+      }, 2000); 
+            
+            window.addEventListener("scroll", function () {
+              const logo = document.getElementById("logo1");
+              if (window.scrollY > 10) {
+                // Threshold for shrinking
+                logo.classList.add("shrink");
+              } else {
+                logo.classList.remove("shrink");
+              }
+            });
+    </script>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="
+        color: white;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: block;
+      "
+    >
+      <div class="container-fluid">
+        <div class="position">
+          <a class="navbar-brand" href="https:pfv.co.in"
+            ><img
+              class="logo"
+              id="logo1"
+              style="margin-left: 35px"
+              width="102px"
+              src="./assets/LOGO S (1).jpg"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link serif-sans active"
+                aria-current="page"
+                href="https:pfv.co.in"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link serif-sans serif-sans" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link serif-sans dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Our Certifications 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">PRAKTRONIX </a></li>
+                <li><a class="dropdown-item" href="#">ANVESHANA </a></li>
+                <li><a class="dropdown-item" href="#">SHUDDHI </a></li>
+                <li><a class="dropdown-item" href="#">SPACECADET </a></li>
+                <li><a class="dropdown-item" href="#">PHYSICIST JUNIOR</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">ONLINE TRAINING</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link serif-sans disabled">Schools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link serif-sans disabled">Academy of joy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link serif-sans disabled">Resources</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero"></div>
+      </div>
+    </nav>
+    <div class="hero nn">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="./assets/6.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+             
+                
+                <button type="button" class="btn btn-light">Watch our Video </button>
+              
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="./assets/7.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+             
+                
+                <button type="button" class="btn btn-light">All Services</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/hh/3.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              
+              <button type="button" class="btn btn-light">All Services</button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <h5 style="text-align: center; padding: 70px 70px 10px; " >Our Services</h5>
+      <img style="margin-left:40%" decoding="async" src="data:image/png;base64,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" alt="" class="inline-image inline-image-ext-png">
+      <br>
+      <p class="container-title">Innovative Learning Solution<br>for Students</p>
+    
+      <div class="gradient-cards">
+        <div class="card">
+          <div class="container-card bg-green-box">
+            <img width="80px" src="./icons/microchip.png" alt="circuit icon">
+            <p class="card-title">PRAKTRONIX LABS</p>
+            <p class="card-description">Build Your Own Electronics Lab - 200+ Hands-On Experiments for Young Innovators</p>
+          </div>
+        </div>
+    
+        <div class="card" style="background-color:#f8f7f4">
+          <div class="container-card bg-white-box">
+            <img width="80px" src="./icons/galaxy.png" alt="galaxy icon">
+
+            <p class="card-title">ANVESHANA (Science Program)</p>
+            <p class="card-description">Deposit a variety of assets on Hubble, raise your collateral ratio, and unlock the liquidity in your wallet.</p>
+          </div>
+        </div>
+    
+        <div class="card" style="background-color:#f8f7f4">
+          <div class="container-card bg-yellow-box">
+            <img width="80px" src="./icons/wellness.png" alt="galaxy icon">
+            <p class="card-title">SHUDDHI (Wellness Program)</p>
+            <p class="card-description">While your collateral is deposited, delegate it to earn the highest yield available in the Solana ecosystem.</p>
+          </div>
+        </div>
+    
+        <div class="card" style="background-color:#f8f7f4">
+          <div class="container-card bg-blue-box">
+            <svg width="80" height="80" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="118" height="118" rx="24" fill="url(#paint0_linear_1366_4582)" fill-opacity="0.15" stroke="url(#paint1_radial_1366_4582)" stroke-width="2"></rect>
+              <path d="M90.9405 64.775L88.0155 69.55L85.1155 64.775H80.0655L85.5155 72.85L79.5905 82H84.4905L88.0155 76.175L91.5155 82H96.4405L90.4905 72.85L95.9405 64.775H90.9405Z" fill="#87A1FF"></path>
+              <path d="M44.9833 35.52L27.3433 43.92V52.53L35.1833 49.17V82H44.9833V35.52ZM71.37 35.52L53.73 43.92V52.53L61.57 49.17V82H71.37V35.52Z" fill="#87A1FF"></path>
+              <defs>
+                <linearGradient id="paint0_linear_1366_4582" x1="120.194" y1="119.827" x2="-13.1225" y2="17.1841" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#61A0FF" stop-opacity="0.7"></stop>
+                  <stop offset="0.489583" stop-color="#61A0FF" stop-opacity="0"></stop>
+                  <stop offset="1" stop-color="#61A0FF" stop-opacity="0.7"></stop>
+                </linearGradient>
+                <radialGradient id="paint1_radial_1366_4582" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 60) rotate(96.8574) scale(122.674 149.921)">
+                  <stop stop-color="#87A1FF"></stop>
+                  <stop offset="1" stop-color="#16161D" stop-opacity="0.2"></stop>
+                </radialGradient>
+              </defs>
+            </svg>
+            <p class="card-title">Get up to 11x Leverage</p>
+            <p class="card-description">Hubble’s capital-efficient 110% collateral ratio lets users leverage up to 11x on their deposits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-3">
+      <div class="p-2 g-col-3"></div>
+      <div class="p-2 g-col-6"></div>
+      <div class="p-2 g-col-6"></div>
+    </div>
+      <div class="d-flex VVV">
+        <video width="520PX" autoplay loop muted>
+          <source src="./videos/pfvtech.mp4" type="video/mp4">
+          pfvtechvedios
+        </video>
+        <div class="container5">
+          <div class="title-container">
+              <h1 id="title"></h1>
+          </div>
+          <div class="description-container">
+              <p id="description"></p>
+          </div>
+          <div class="buttons">
+              <button class="btn btn-primary">Enquire Now</button>
+              <button class="btn btn-secondary">Download Brochure</button>
+          </div>
+      </div>
+      </div>
+    
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <div class="logo-icon">PFV</div>
+              Prakriti Future Ventures
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel risus eget quam suscipit feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f">f</i></a>facebook
+              
+              <a href="#"><i class="fab fa-instagram">i</i></a>instagram
+              <a href="#"><i class="fab fa-linkedin-in">l</i></a>Linkedin
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">PRAKTRONIX </a></li>
+              <li><a href="#">JUNIOR PHYSICIST</a></li>
+              <li><a href="#">SPACECADET</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Prakriti Future Ventures. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
